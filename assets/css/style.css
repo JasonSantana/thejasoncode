@@ -153,7 +153,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 3.2rem;
 	font-family: "Tulpen One", sans-serif;
 	word-spacing: -1%;
 	text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
@@ -332,20 +332,26 @@ label {
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
 	font-size: 1rem;
-	font-weight: 300;
+	font-weight: 100;
 	text-align: left;
 }
 
 input {
-	height: 1.5rem;
-	width: 80%;
+	height: 1.3rem;
+	width: 70%;
 	border-radius: 0.3rem;
 	margin-bottom: 1rem;
 }
 
+::placeholder {
+	font-size: 0.7rem;
+	font-weight: 100;
+}
+
 textarea {
+	margin-top: 0.5rem;
 	height: 100%;
-	width: 80%;
+	width: 70%;
 }
 
 .emailButton {
@@ -385,7 +391,7 @@ textarea {
 }
 
 .socialMedia {
-	height: 20vh;
+	height: 25vh;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
@@ -410,6 +416,7 @@ textarea {
 
 /* Media Queries */
 
+/* root plus landscape */
 @media only screen and (min-width: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
 	nav {
 		height: 50vh;
@@ -461,62 +468,81 @@ textarea {
 	}
 
 	.form-container {
-		height: 90vh;
+		height: 100vh;
 		width: 40vw;
 	}
 
+	.form {
+		height: 10vh;
+	}
+
 	.socialMedia {
-		height: 45vh;
-	}
-}
-
-/* Small devices Iphone 5 */
-@media only screen and (min-width: 321px) and (max-width: 389px) and (-webkit-device-pixel-ratio: 2) {
-	.show {
-		transform: translateX(175px);
-	}
-
-	.profileImg {
-		height: 300px;
-		width: 300px;
-	}
-
-	h2 {
-		font-size: 3rem;
-	}
-
-	.contact {
-		height: 350px;
-	}
-
-	.icons,
-	img {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		margin: 0 2px;
-		height: 25px;
-		width: 25px;
+		height: 50vh;
 	}
 
 	.socialIcon {
-		margin: 0.5em 1.2em;
+		height: 1.5rem;
+		width: 1.5rem;
+		margin: 1em 2em;
 	}
 }
 
-@media only screen and (min-width: 375px) and (max-width: 413px) and (-webkit-device-pixel-ratio: 3) {
+/* Galaxy Fold */
+
+@media only screen and (min-width: 280px) {
+	.show {
+		transform: translateX(120px);
+	}
+
+	.icons img {
+		margin: 0 0.1em;
+	}
+}
+
+/* Samsung Galaxy S8 */
+@media only screen and (min-width: 360px) {
+	.show {
+		transform: translateX(165px);
+	}
+
+	h2 {
+		height: 1.2rem;
+		width: 1.2;
+	}
+
+	.aboutMe h2 {
+		margin-bottom: 4rem;
+	}
+
+	.form-container {
+		height: 50vh;
+	}
+
+	.socialIcon {
+		margin: 1rem 1rem;
+	}
+}
+
+@media only screen and (min-width: 360px) and (-webkit-device-pixel-ratio: 1) {
+}
+
+/* Ipohe SE */
+@media only screen and (min-width: 375px) and (-webkit-device-pixel-ratio: 2) {
 	.show {
 		transform: translateX(190px);
 	}
 
-	h2 {
+	.aboutMe h2 {
 		font-size: 3rem;
+		margin-bottom: 4rem;
 	}
 
+	h3 {
+		font-size: 1.5rem;
+	}
 	.profileImg {
-		height: 300px;
-		width: 300px;
+		height: 250px;
+		width: 250px;
 	}
 
 	.form-container {
@@ -539,7 +565,7 @@ textarea {
 	}
 
 	p {
-		font-size: 1.5rem;
+		font-size: 1.1rem;
 	}
 
 	.form-container {
@@ -557,10 +583,26 @@ textarea {
 	}
 }
 
-/* Iphone SE */
+/* Iphone X */
+
+@media only screen and (min-width: 375px) and (-webkit-device-pixel-ratio: 3) {
+	.show {
+		transform: translateX(190px);
+	}
+
+	.icons img {
+		margin: 0 0.1em;
+	}
+}
+
+/* Iphone 12Pro */
 @media only screen and (min-width: 390px) and (max-width: 413px) and (-webkit-device-pixel-ratio: 3) {
 	.show {
 		transform: translateX(195px);
+	}
+
+	.h {
+		height: 80vh;
 	}
 
 	h2 {
@@ -568,16 +610,20 @@ textarea {
 	}
 
 	.profileImg {
-		height: 300px;
-		width: 300px;
+		height: 200px;
+		width: 200px;
+	}
+
+	.aboutMe h2 {
+		margin-bottom: 3.5rem;
 	}
 
 	.form-container {
-		height: 500px;
+		height: 50vh;
 	}
 
 	.contact {
-		height: 400px;
+		height: 40vh;
 	}
 
 	.icons,
@@ -596,14 +642,93 @@ textarea {
 	}
 }
 
-/* iphone 12 */
+/* Pixel 7 */
+@media only screen and (min-width: 412px) {
+	.show {
+		transform: translateX(215px);
+	}
+
+	.h {
+		height: 80vh;
+	}
+
+	h1 {
+		font-size: 6rem;
+	}
+
+	h2 {
+		font-size: 4rem;
+		margin-bottom: 3rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	.profileImg {
+		height: 200px;
+		width: 200px;
+	}
+
+	.icons img {
+		height: 1.6rem;
+		width: 1.6rem;
+	}
+
+	.projectCards {
+		height: 200px;
+		width: 100px;
+	}
+
+	.aboutMe h2 {
+		margin-bottom: 3rem;
+	}
+
+	p {
+		font-size: 1.1rem;
+	}
+
+	.form-container {
+		height: 50vh;
+	}
+
+	.contact {
+		height: 35vh;
+	}
+
+	label {
+		font-size: 1.5rem;
+	}
+
+	input {
+		width: 80%;
+	}
+
+	textarea {
+		width: 80%;
+	}
+
+	.socialIcon {
+		height: 1.3rem;
+		width: 1.3rem;
+		margin: 0 1.2rem;
+	}
+}
+
+/* IphoneXR */
 @media only screen and (min-width: 414px) and (max-width: 429px) and (-webkit-device-pixel-ratio: 2) {
 	.show {
 		transform: translateX(215px);
 	}
 
+	.h {
+		height: 80vh;
+	}
+	h1 {
+		font-size: 6rem;
+	}
 	h2 {
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 
 	h3 {
@@ -613,6 +738,18 @@ textarea {
 	.profileImg {
 		height: 300px;
 		width: 300px;
+	}
+
+	.cards {
+		flex-direction: row;
+	}
+
+	.aboutMe h2 {
+		margin-bottom: 4rem;
+	}
+
+	p {
+		font-size: 1.2rem;
 	}
 
 	.form-container {
@@ -635,27 +772,57 @@ textarea {
 	}
 
 	.socialIcon {
+		height: 1.5rem;
+		width: 1.5rem;
 		margin: 2em 1.2em;
 	}
 }
 
-/* Iphone 14pro */
-@media only screen and (min-width: 430px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 3) {
+/* Iphone 6/7/8 */
+
+@media only screen and (min-width: 414px) and (max-width: 429px) and (-webkit-device-pixel-ratio: 3) {
+	.form-container {
+		height: 60vh;
+	}
+
+	.contact {
+		height: 50vh;
+	}
+}
+
+/* Iphone 14pro Max */
+@media only screen and (min-width: 430px) and (-webkit-device-pixel-ratio: 3) {
 	.show {
 		transform: translateX(230px);
 	}
 
+	.h {
+		height: 80vh;
+	}
+
+	h1 {
+		font-size: 6.5rem;
+	}
+
 	h2 {
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 
 	h3 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	.profileImg {
-		height: 300px;
-		width: 300px;
+		height: 250px;
+		width: 250px;
+	}
+
+	.aboutMe h2 {
+		margin-bottom: 3rem;
+	}
+
+	p {
+		font-size: 1.2rem;
 	}
 
 	.form-container {
@@ -682,13 +849,16 @@ textarea {
 	}
 
 	.socialIcon {
+		height: 1.2rem;
+		width: 1.2rem;
 		margin: 2em 1.2em;
 	}
 }
 
-@media only screen and (min-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+/* Surface Duo */
+@media only screen and (min-width: 540px) {
 	nav {
-		height: 50vh;
+		height: 10vh;
 		width: 100%;
 	}
 
@@ -702,7 +872,437 @@ textarea {
 
 	.links {
 		height: 10vh;
-		width: 20%;
+		width: 2%;
+		position: absolute;
+		top: 0.05em;
+		left: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		transition: 500ms ease-in-out;
+		opacity: 1;
+		margin: 0 1rem;
+	}
+
+	.logo {
+		left: 0.7rem;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0.8em;
+		right: 0.005em;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-links li {
+		margin: 0 0.2em;
+		padding: 0;
+	}
+
+	.links ul li a {
+		font-size: 1.5em;
+	}
+}
+
+/* Iphone 5/SE Plus Landscape */
+
+@media only screen and (min-width: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+	nav {
+		height: 10vh;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.close {
+		display: none;
+	}
+
+	.links {
+		height: 5vh;
+		width: 9%;
+		position: absolute;
+		top: 0.05em;
+		left: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		transition: 500ms ease-in-out;
+		opacity: 1;
+		padding: 0;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0.8em;
+		right: 0.4rem;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-links li {
+		margin: 0 0.5em;
+		padding: 0;
+	}
+
+	.links ul li a {
+		font-size: 1.5em;
+	}
+
+	.logo {
+		font-size: 2.5rem;
+		top: 0.5rem;
+		left: 0.7rem;
+	}
+
+	.h {
+		height: 100vh;
+	}
+
+	h1 {
+		font-size: 4rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	.profileImg {
+		height: 130px;
+		width: 130px;
+	}
+
+	.skills {
+		height: 100vh;
+	}
+
+	.projectCards {
+		height: 150px;
+	}
+
+	p {
+		font-size: 0.8rem;
+	}
+	.email {
+		height: 200vh;
+	}
+
+	.form-container {
+		height: 95vh;
+		width: 40vw;
+	}
+
+	.form {
+		height: 40vh;
+	}
+
+	.contact {
+		height: 80vh;
+	}
+
+	label {
+		font-size: 0.8rem;
+	}
+
+	input {
+		height: 1rem;
+	}
+
+	textarea {
+		height: 90%;
+	}
+
+	.socialMedia {
+		height: 50vh;
+	}
+
+	.socialIcon {
+		height: 1.2rem;
+		width: 1.2rem;
+		margin: 0.1em 2em;
+	}
+}
+
+/* Galaxy S5 Plus Landscape */
+
+@media only screen and (min-width: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+	nav {
+		height: 10vh;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.close {
+		display: none;
+	}
+
+	.links {
+		height: 5vh;
+		width: 18%;
+		position: absolute;
+		top: 0.05em;
+		left: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		transition: 500ms ease-in-out;
+		opacity: 1;
+		padding: 0;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0.8em;
+		right: 0.4rem;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-links li {
+		margin: 0 0.5em;
+		padding: 0;
+	}
+
+	.links ul li a {
+		font-size: 1.5em;
+	}
+
+	.logo {
+		font-size: 2.5rem;
+		top: 0.5rem;
+		left: 1.5rem;
+	}
+
+	.h {
+		height: 100vh;
+	}
+
+	h1 {
+		font-size: 4rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	.profileImg {
+		height: 130px;
+		width: 130px;
+	}
+
+	.skills {
+		height: 100vh;
+	}
+
+	.projectCards {
+		height: 150px;
+	}
+
+	p {
+		font-size: 0.8rem;
+	}
+	.email {
+		height: 200vh;
+	}
+
+	.form-container {
+		height: 90vh;
+		width: 40vw;
+	}
+
+	.form {
+		height: 40vh;
+	}
+
+	.contact {
+		height: 70vh;
+	}
+
+	label {
+		font-size: 0.8rem;
+	}
+
+	input {
+		height: 1rem;
+	}
+
+	textarea {
+		height: 80%;
+	}
+
+	.socialMedia {
+		height: 50vh;
+	}
+
+	.socialIcon {
+		height: 1.5rem;
+		width: 1.5rem;
+		margin: 0.1em 2em;
+	}
+}
+
+/* Galaxy Fold Plus Landscape */
+@media only screen and (min-width: 653px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+	nav {
+		height: 10vh;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.close {
+		display: none;
+	}
+
+	.links {
+		height: 5vh;
+		width: 18%;
+		position: absolute;
+		top: 0.05em;
+		left: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		transition: 500ms ease-in-out;
+		opacity: 1;
+		padding: 0;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0.8em;
+		right: 0.4rem;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-links li {
+		margin: 0 0.5em;
+		padding: 0;
+	}
+
+	.links ul li a {
+		font-size: 1.5em;
+	}
+
+	.logo {
+		font-size: 2.5rem;
+		top: 0.5rem;
+		left: 1.5rem;
+	}
+
+	.h {
+		height: 100vh;
+	}
+
+	h1 {
+		font-size: 4rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	.profileImg {
+		height: 130px;
+		width: 130px;
+	}
+
+	.skills {
+		height: 100vh;
+	}
+
+	.projectCards {
+		height: 150px;
+	}
+
+	p {
+		font-size: 0.8rem;
+	}
+	.email {
+		height: 200vh;
+	}
+
+	.form-container {
+		height: 90vh;
+		width: 40vw;
+	}
+
+	.form {
+		height: 40vh;
+	}
+
+	.contact {
+		height: 70vh;
+	}
+
+	label {
+		font-size: 0.8rem;
+	}
+
+	input {
+		height: 1rem;
+	}
+
+	textarea {
+		height: 80%;
+	}
+
+	.socialMedia {
+		height: 50vh;
+	}
+
+	.socialIcon {
+		height: 1.5rem;
+		width: 1.5rem;
+		margin: 0.1em 2em;
+	}
+}
+
+/* Iphone SE Landscape */
+@media only screen and (min-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+	nav {
+		height: 20vh;
+		width: 100%;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.close {
+		display: none;
+	}
+
+	.links {
+		height: 10vh;
+		width: 21%;
 		position: absolute;
 		top: 0.05em;
 		left: 0.5rem;
@@ -733,15 +1333,31 @@ textarea {
 		font-size: 1.5em;
 	}
 
-	.icons,
-	img {
+	.h {
+		height: 90vh;
+	}
+
+	.profileImg {
+		height: 180px;
+		width: 180px;
+	}
+
+	.icons img {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		margin: 0 15px;
-		height: 20px;
-		width: 20px;
+		height: 1.7rem;
+		width: 1.7rem;
+	}
+
+	.projectCards {
+		margin: 0 auto;
+	}
+
+	.projectCards {
+		width: 70%;
 	}
 
 	.email {
@@ -753,19 +1369,244 @@ textarea {
 		width: 35vw;
 	}
 
+	.form {
+		height: 80vh;
+	}
+
+	label {
+		font-size: 1rem;
+	}
+
+	textarea {
+		height: 80%;
+	}
+
+	.contact {
+		height: 80vh;
+	}
+
 	.socialMedia {
 		height: 45vh;
 	}
 
 	.socialIcon {
-		height: 1rem;
-		width: 1rem;
+		height: 1.2rem;
+		width: 1.2rem;
+		margin: 0.2em 2.5em;
+	}
+}
+
+/* Surface Duo Plus Landscape */
+@media only screen and (min-width: 720px) and (orientation: landscape) {
+	.links {
+		width: 26%;
+	}
+
+	.form-container {
+		height: 70vh;
+		width: 40%;
+	}
+
+	.form {
+		height: 30vh;
+	}
+
+	.contact {
+		height: 60vh;
+	}
+
+	.socialMedia {
+		height: 40vh;
+	}
+}
+
+/* Iphone 6/7/8 Plus Lanscape */
+
+@media only screen and (min-width: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+	nav {
+		height: 10vh;
+		width: 100%;
+	}
+
+	.nav-items {
+		height: 50vh;
+		width: 100vw;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.close {
+		display: none;
+	}
+
+	.links {
+		height: 10vh;
+		width: 28%;
+		position: absolute;
+		top: 0.05em;
+		left: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		transition: 500ms ease-in-out;
+		opacity: 1;
+		padding: 0;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0.8em;
+		right: 0.05rem;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-links li {
+		margin: 0 0.5em;
+		padding: 0;
+	}
+
+	.logo {
+		font-size: 3rem;
+		top: 0.4rem;
+		left: 1rem;
+	}
+
+	.links ul li a {
+		font-size: 2em;
+	}
+
+	.h {
+		height: 100vh;
+	}
+
+	.icons,
+	img {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 0 15px;
+		height: 30px;
+		width: 30px;
+	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		font-size: 3.5rem;
+	}
+
+	h4 {
+		font-size: 2rem;
+	}
+
+	h5 {
+		font-size: 3rem;
+	}
+
+	h6 {
+		font-size: 2rem;
+	}
+
+	.skills {
+		height: 100vh;
+	}
+
+	.projectCards {
+		height: 200px;
+		width: 150px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		border-radius: 1rem;
+		box-shadow: rgb(38, 57, 77) 0px 20px 10px -10px;
+		transition: 200ms ease-in-out;
+	}
+
+	p {
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+		padding: 1rem 2rem;
+		text-align: center;
+	}
+
+	.email {
+		height: 180vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.profileImg {
+		height: 200px;
+		width: 200px;
+	}
+
+	.form-container {
+		height: 90vh;
+		width: 30vw;
+	}
+
+	.form {
+		height: 90vh;
+		width: 30vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+	}
+
+	.contact {
+		height: 70vh;
+	}
+
+	label {
+		font-family: "Inter", sans-serif;
+		font-optical-sizing: auto;
+		font-size: 1rem;
+		font-weight: 100;
+		text-align: left;
+	}
+
+	input {
+		height: 1.5rem;
+		width: 80%;
+		border-radius: 0.3rem;
+		margin-bottom: 1rem;
+	}
+
+	textarea {
+		height: 100%;
+		width: 80%;
+	}
+
+	.socialMedia {
+		height: 45vh;
+	}
+
+	.socialIcon {
+		height: 1.5rem;
+		width: 1.5rem;
 		margin: 1em 2.5em;
 	}
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 819px) {
+/* Ipad Mini  */
+@media only screen and (min-width: 768px) and (max-width: 811px) {
 	.hamburger {
 		display: none;
 	}
@@ -811,9 +1652,13 @@ textarea {
 		font-family: "Tulpen One", sans-serif;
 	}
 
+	.links ul li a {
+		font-size: 2rem;
+	}
+
 	.profileImg {
-		height: 400px;
-		width: 400px;
+		height: 300px;
+		width: 300px;
 	}
 
 	.skills {
@@ -821,19 +1666,18 @@ textarea {
 		width: 100vw;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
 	}
 
-	.icons,
-	img {
+	.icons img {
+		height: 2rem;
+		width: 2rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		margin: 0 5px;
-		height: 50px;
-		width: 50px;
+		margin: 4rem 1rem;
 	}
 
 	h1 {
@@ -845,14 +1689,14 @@ textarea {
 	}
 
 	h2 {
-		font-size: 6rem;
+		font-size: 5rem;
 		font-family: "Tulpen One", sans-serif;
 		word-spacing: -1%;
 		text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
 	}
 
 	h3 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		font-family: "Vujahday Script", cursive;
 		line-height: 1.2;
 		word-spacing: -1%;
@@ -882,6 +1726,11 @@ textarea {
 		font-weight: 400;
 		font-style: normal;
 		font-size: 2rem;
+	}
+
+	.aboutMe h2 {
+		font-size: 5rem;
+		margin-bottom: 8rem;
 	}
 
 	p {
@@ -945,7 +1794,7 @@ textarea {
 	}
 
 	input {
-		height: 5;
+		height: 5rem;
 		width: 100%;
 		border-radius: 0.3rem;
 		margin-bottom: 1rem;
@@ -1005,6 +1854,137 @@ textarea {
 	}
 }
 
+/* Samsung Galax S* Plus Landscape */
+@media only screen and (min-width: 740px) and (orientation: landscape) {
+	nav {
+		height: 15vh;
+	}
+	.hamburger {
+		display: none;
+	}
+
+	.close {
+		display: none;
+	}
+
+	.links {
+		height: 10vh;
+		width: 28%;
+		position: absolute;
+		top: 0.05em;
+		left: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		transition: 500ms ease-in-out;
+		opacity: 1;
+		padding: 0;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0.8em;
+		right: 0.05rem;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-links li {
+		margin: 0 0.5em;
+		padding: 0;
+	}
+
+	.h {
+		height: 80vh;
+	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+	}
+
+	.profileImg {
+		height: 180px;
+		width: 180px;
+	}
+
+	.projectCards {
+		height: 180px;
+		width: 100px;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+
+	.email {
+		height: 200vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.form-container {
+		height: 95vh;
+		width: 30vw;
+	}
+
+	.form {
+		height: 80vh;
+		width: 30vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+	}
+
+	.contact {
+		height: 80vh;
+	}
+
+	label {
+		font-family: "Inter", sans-serif;
+		font-optical-sizing: auto;
+		font-size: 1rem;
+		font-weight: 300;
+		text-align: left;
+	}
+
+	input {
+		height: 1.5rem;
+		width: 80%;
+		border-radius: 0.3rem;
+		margin-bottom: 1rem;
+	}
+
+	textarea {
+		height: 30%;
+		width: 80%;
+	}
+
+	.socialMedia {
+		height: 45vh;
+	}
+
+	.socialIcon {
+		height: 1.5rem;
+		width: 1.5rem;
+		margin: 0.5rem 2.5em;
+	}
+}
+
 @media only screen and (min-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
 	nav {
 		height: 10vh;
@@ -1026,7 +2006,7 @@ textarea {
 
 	.links {
 		height: 10vh;
-		width: 37%;
+		width: 35%;
 		position: absolute;
 		top: 0.05em;
 		left: 0.5rem;
@@ -1067,6 +2047,11 @@ textarea {
 		height: 100vh;
 	}
 
+	.profileImg {
+		height: 150px;
+		width: 150px;
+	}
+
 	.icons,
 	img {
 		display: flex;
@@ -1079,7 +2064,7 @@ textarea {
 	}
 
 	h1 {
-		font-size: 6rem;
+		font-size: 5rem;
 	}
 
 	h3 {
@@ -1176,6 +2161,7 @@ textarea {
 	}
 }
 
+/* Ipad Air */
 @media only screen and (min-width: 820px) {
 	.hamburger {
 		display: none;
@@ -1187,7 +2173,7 @@ textarea {
 
 	.links {
 		height: 5vh;
-		width: 38%;
+		width: 36%;
 		position: absolute;
 		top: 0.05em;
 		left: 0.5rem;
@@ -1199,6 +2185,10 @@ textarea {
 		transition: 500ms ease-in-out;
 		opacity: 1;
 		padding: 0;
+	}
+
+	.links ul li a {
+		font-size: 2.5rem;
 	}
 
 	.nav-links {
@@ -1217,14 +2207,14 @@ textarea {
 	.logo {
 		position: absolute;
 		top: 0.8rem;
-		left: 1rem;
+		left: 1.3rem;
 		font-size: 4rem;
 		font-family: "Tulpen One", sans-serif;
 	}
 
 	.profileImg {
-		height: 500px;
-		width: 500px;
+		height: 300px;
+		width: 300px;
 	}
 
 	.skills {
@@ -1232,19 +2222,18 @@ textarea {
 		width: 100vw;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
 	}
 
-	.icons,
-	img {
+	.icons img {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		margin: 0 5px;
-		height: 50px;
-		width: 50px;
+		margin: 5rem 0.8rem;
+		height: 40px;
+		width: 40px;
 	}
 
 	h1 {
@@ -1256,7 +2245,7 @@ textarea {
 	}
 
 	h2 {
-		font-size: 6rem;
+		font-size: 5.5rem;
 		font-family: "Tulpen One", sans-serif;
 		word-spacing: -1%;
 		text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
@@ -1295,6 +2284,10 @@ textarea {
 		font-size: 2rem;
 	}
 
+	.aboutMe h2 {
+		margin-bottom: 8rem;
+	}
+
 	p {
 		font-size: 1.5rem;
 		line-height: 2rem;
@@ -1304,7 +2297,7 @@ textarea {
 
 	.projectCards {
 		height: 350px;
-		width: 250px;
+		width: 230px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -1417,6 +2410,7 @@ textarea {
 	}
 }
 
+/* Iphone 12Pro plus landscape */
 @media only screen and (min-width: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
 	nav {
 		height: 10vh;
@@ -1438,7 +2432,7 @@ textarea {
 
 	.links {
 		height: 10vh;
-		width: 40%;
+		width: 37%;
 		position: absolute;
 		top: 0.05em;
 		left: 0.5rem;
@@ -1476,7 +2470,7 @@ textarea {
 	}
 
 	.h {
-		height: 100vh;
+		height: 90vh;
 	}
 
 	.icons,
@@ -1491,7 +2485,7 @@ textarea {
 	}
 
 	h1 {
-		font-size: 6rem;
+		font-size: 5.5rem;
 	}
 
 	h3 {
@@ -1518,6 +2512,10 @@ textarea {
 		transition: 200ms ease-in-out;
 	}
 
+	.projectCards p {
+		font-weight: 100;
+	}
+
 	p {
 		font-size: 1.2rem;
 		line-height: 1.5rem;
@@ -1535,8 +2533,12 @@ textarea {
 	}
 
 	.profileImg {
-		height: 200px;
-		width: 200px;
+		height: 180px;
+		width: 180px;
+	}
+
+	.aboutMe h2 {
+		margin-bottom: 2.5rem;
 	}
 
 	.form-container {
@@ -1588,6 +2590,7 @@ textarea {
 	}
 }
 
+/* Iphone XR plus lanscaped */
 @media only screen and (min-width: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
 	nav {
 		height: 10vh;
@@ -1678,8 +2681,8 @@ textarea {
 	}
 
 	.projectCards {
-		height: 250px;
-		width: 200px;
+		height: 200px;
+		width: 150px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -1687,6 +2690,15 @@ textarea {
 		border-radius: 1rem;
 		box-shadow: rgb(38, 57, 77) 0px 20px 10px -10px;
 		transition: 200ms ease-in-out;
+	}
+
+	.aboutMe h2 {
+		margin-bottom: 2rem;
+	}
+
+	.projectCards p {
+		font-size: 1rem;
+		font-weight: 200;
 	}
 
 	p {
@@ -1706,8 +2718,8 @@ textarea {
 	}
 
 	.profileImg {
-		height: 250px;
-		width: 250px;
+		height: 200px;
+		width: 200px;
 	}
 
 	.form-container {
@@ -1759,6 +2771,210 @@ textarea {
 	}
 }
 
+/* Surface Pro 7 */
+@media only screen and (min-width: 912px) {
+	.links {
+		width: 43%;
+	}
+
+	.links > ul > li > a {
+		font-size: 2.2rem;
+	}
+
+	.logo {
+		left: 1.8rem;
+	}
+
+	.form-container {
+		height: 50vh;
+		width: 40vw;
+	}
+
+	.form {
+		height: 50vh;
+		width: 40vw;
+	}
+
+	.contact {
+		height: 40vh;
+	}
+
+	input {
+		height: 2rem;
+	}
+
+	textarea {
+		height: 10vh;
+	}
+
+	::placeholder {
+		font-size: 1rem;
+	}
+}
+
+/* Samsung Galaxy A51 Plus Lanscape */
+@media only screen and (min-width: 914px) and (orientation: landscape) {
+	nav {
+		height: 10vh;
+	}
+
+	.links {
+		width: 42%;
+	}
+
+	.h {
+		height: 90vh;
+	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	.aboutMe h2 {
+		margin-bottom: 3rem;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+	}
+	.profileImg {
+		height: 180px;
+		width: 180px;
+	}
+
+	.projectCards {
+		height: 200px;
+		width: 150px;
+	}
+
+	.projectCards p {
+		font-size: 1rem;
+		font-weight: 200;
+	}
+
+	p {
+		font-size: 1.1rem;
+	}
+
+	.form-container {
+		height: 90vh;
+		width: 30%;
+	}
+
+	.form {
+		height: 90vh;
+	}
+
+	.contact {
+		height: 70vh;
+	}
+
+	label {
+		font-size: 1.1rem;
+	}
+
+	input {
+		width: 90%;
+	}
+
+	textarea {
+		width: 90%;
+	}
+
+	.socialMedia {
+		height: 50vh;
+	}
+
+	.socialIcon {
+		height: 1.4rem;
+		width: 1.4rem;
+	}
+}
+
+/* Pixel 7 Plus Lanscape*/
+@media only screen and (min-width: 915px) and (orientation: landscape) {
+	nav {
+		height: 10vh;
+	}
+
+	.links {
+		width: 42%;
+	}
+
+	.h {
+		height: 90vh;
+	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+	}
+	.profileImg {
+		height: 180px;
+		width: 180px;
+	}
+
+	.projectCards {
+		height: 200px;
+		width: 150px;
+	}
+
+	.projectCards p {
+		font-size: 1rem;
+		font-weight: 200;
+	}
+
+	p {
+		font-size: 1.1rem;
+	}
+
+	.form-container {
+		height: 90vh;
+		width: 30%;
+	}
+
+	.form {
+		height: 90vh;
+	}
+
+	.contact {
+		height: 70vh;
+	}
+
+	label {
+		font-size: 1.1rem;
+	}
+
+	input {
+		width: 90%;
+	}
+
+	textarea {
+		width: 90%;
+	}
+
+	.socialMedia {
+		height: 50vh;
+	}
+
+	.socialIcon {
+		height: 1.4rem;
+		width: 1.4rem;
+	}
+}
+
+/* Iphone 14 Pro Max plus lanscape */
 @media only screen and (min-width: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
 	nav {
 		height: 10vh;
@@ -1780,7 +2996,7 @@ textarea {
 
 	.links {
 		height: 10vh;
-		width: 40%;
+		width: 42%;
 		position: absolute;
 		top: 0.05em;
 		left: 0.5rem;
@@ -1810,7 +3026,7 @@ textarea {
 	.logo {
 		font-size: 3rem;
 		top: 0.4rem;
-		left: 3.8rem;
+		left: 1.5rem;
 	}
 
 	.links ul li a {
@@ -1833,7 +3049,7 @@ textarea {
 	}
 
 	h1 {
-		font-size: 4rem;
+		font-size: 5rem;
 	}
 
 	h3 {
@@ -1841,7 +3057,7 @@ textarea {
 	}
 
 	h2 {
-		font-size: 3rem;
+		font-size: 3.5rem;
 	}
 
 	.skills {
@@ -1849,8 +3065,8 @@ textarea {
 	}
 
 	.projectCards {
-		height: 250px;
-		width: 200px;
+		height: 200px;
+		width: 150px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -1877,8 +3093,8 @@ textarea {
 	}
 
 	.profileImg {
-		height: 250px;
-		width: 250px;
+		height: 200px;
+		width: 200px;
 	}
 
 	.form-container {
@@ -1932,7 +3148,7 @@ textarea {
 
 /*  Large devices (laptops/desktops, 992px and up) */
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
 	.hamburger {
 		display: none;
 	}
@@ -1943,7 +3159,7 @@ textarea {
 
 	.links {
 		height: 5vh;
-		width: 50%;
+		width: 48%;
 		position: absolute;
 		top: 0.05em;
 		left: 0.5rem;
@@ -1955,6 +3171,14 @@ textarea {
 		transition: 500ms ease-in-out;
 		opacity: 1;
 		padding: 0;
+	}
+
+	.links > ul > li > a {
+		color: black;
+		text-decoration: none;
+		font-family: "Tulpen One", sans-serif;
+		font-size: 2.5rem;
+		transition: 1ms ease-in-out;
 	}
 
 	.nav-links {
@@ -1973,14 +3197,14 @@ textarea {
 	.logo {
 		position: absolute;
 		top: 0.8rem;
-		left: 1rem;
+		left: 1.5rem;
 		font-size: 5rem;
 		font-family: "Tulpen One", sans-serif;
 	}
 
 	.profileImg {
-		height: 500px;
-		width: 500px;
+		height: 400px;
+		width: 400px;
 		border-radius: 50%;
 	}
 
@@ -2032,7 +3256,7 @@ textarea {
 		font-family: "Lemon", serif;
 		font-weight: 400;
 		font-style: normal;
-		font-size: 2.3rem;
+		font-size: 4rem;
 		text-decoration: none;
 		text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1);
 	}
@@ -2041,7 +3265,7 @@ textarea {
 		font-family: "Fuggles", cursive;
 		font-weight: 400;
 		font-style: normal;
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 
 	h6 {
@@ -2049,11 +3273,15 @@ textarea {
 		font-family: "Megrim", system-ui;
 		font-weight: 400;
 		font-style: normal;
-		font-size: 2rem;
+		font-size: 3rem;
+	}
+
+	.aboutMe h2 {
+		font-size: 6rem;
 	}
 
 	p {
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 		line-height: 2rem;
 		padding: 1rem 2rem;
 		text-align: center;
@@ -2065,7 +3293,7 @@ textarea {
 
 	.projectCards {
 		height: 400px;
-		width: 300px;
+		width: 250px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -2118,14 +3346,19 @@ textarea {
 	}
 
 	input {
-		height: 5rem;
+		height: 4rem;
 		width: 100%;
 		border-radius: 0.3rem;
 		margin-bottom: 1rem;
 	}
 
 	textarea {
+		height: 30vh;
 		width: 100%;
+	}
+
+	::placeholder {
+		font-size: 1.2rem;
 	}
 
 	.emailButton {
@@ -2151,7 +3384,8 @@ textarea {
 			transform 0.1s;
 		user-select: none;
 		-webkit-user-select: none;
-		width: auto;
+		width: 30%;
+		height: 3rem;
 	}
 
 	.socialMedia {
@@ -2178,6 +3412,7 @@ textarea {
 	}
 }
 
+/* Ipad Mini Plus Landscape */
 @media only screen and (min-width: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
 	nav {
 		height: 10vh;
@@ -2191,7 +3426,7 @@ textarea {
 
 	.links {
 		height: 10vh;
-		width: 50%;
+		width: 49%;
 		position: absolute;
 		top: 0.05em;
 		left: 0.5rem;
@@ -2232,31 +3467,36 @@ textarea {
 		height: 90vh;
 	}
 
-	.icons,
-	img {
+	.icons img {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		margin: 0 15px;
+		margin: 80px 15px;
 		height: 40px;
 		width: 40px;
 	}
 
 	h1 {
-		font-size: 9rem;
+		font-size: 8rem;
 	}
 
 	h3 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 
 	h2 {
-		font-size: 6rem;
+		font-size: 5.5rem;
+		margin-bottom: 6rem;
 	}
 
 	.skills {
 		height: 100vh;
+	}
+
+	.aboutMe h2 {
+		font-size: 5rem;
+		margin-bottom: 8rem;
 	}
 
 	.projectCards {
@@ -2272,7 +3512,7 @@ textarea {
 	}
 
 	p {
-		font-size: 1.8rem;
+		font-size: 1.4rem;
 		line-height: 1.8rem;
 		word-spacing: 0.8rem;
 		padding: 1rem 2rem;
@@ -2332,14 +3572,37 @@ textarea {
 		width: 80%;
 	}
 
+	::placeholder {
+		font-size: 0.9rem;
+	}
+
 	.socialMedia {
-		height: 30vh;
+		height: 40vh;
 	}
 
 	.socialIcon {
 		height: 2rem;
 		width: 2rem;
 		margin: 1em 2.5em;
+	}
+}
+
+/* Ipad Air Plus Landscape */
+@media only screen and (min-width: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+	.links {
+		width: 55%;
+	}
+
+	.logo {
+		left: 1.8rem;
+	}
+
+	h4 {
+		font-size: 2rem;
+	}
+
+	h6 {
+		font-size: 2rem;
 	}
 }
 
@@ -2672,6 +3935,171 @@ textarea {
 	}
 }
 
+/* Nest Hub Max */
+@media only screen and (min-width: 1280px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+	nav {
+		height: 10vh;
+		width: 100%;
+	}
+
+	.nav-items {
+		height: 50vh;
+		width: 100vw;
+	}
+
+	.links {
+		height: 10vh;
+		width: 58%;
+		position: absolute;
+		top: 0.05em;
+		left: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		transition: 500ms ease-in-out;
+		opacity: 1;
+		padding: 0;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0.8em;
+		right: 0.05rem;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-links li {
+		margin: 0 0.5em;
+		padding: 0;
+	}
+
+	.logo {
+		font-size: 5rem;
+		top: 0.4rem;
+		left: 1.5rem;
+	}
+
+	.links ul li a {
+		font-size: 3em;
+	}
+
+	.h {
+		height: 90vh;
+	}
+
+	.icons img {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 0 20px;
+		height: 50px;
+		width: 50px;
+	}
+
+	h1 {
+		font-size: 9rem;
+	}
+
+	h3 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 6rem;
+	}
+
+	.skills {
+		height: 100vh;
+	}
+
+	.projectCards {
+		height: 350px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		border-radius: 1rem;
+		box-shadow: rgb(38, 57, 77) 0px 20px 10px -10px;
+		transition: 200ms ease-in-out;
+	}
+
+	p {
+		font-size: 2rem;
+		line-height: 1.8rem;
+		word-spacing: 0.8rem;
+		padding: 1rem 2rem;
+		text-align: center;
+	}
+
+	.email {
+		height: 180vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.profileImg {
+		height: 400px;
+		width: 400px;
+	}
+
+	.form-container {
+		height: 70vh;
+		width: 40vw;
+	}
+
+	.form {
+		height: 70vh;
+		width: 60vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+	}
+
+	.contact {
+		height: 50vh;
+		width: 30vw;
+	}
+
+	label {
+		font-family: "Inter", sans-serif;
+		font-optical-sizing: auto;
+		font-size: 1.8rem;
+		font-weight: 300;
+		text-align: left;
+	}
+
+	input {
+		height: 5rem;
+		width: 80%;
+		border-radius: 0.3rem;
+		margin-bottom: 1rem;
+	}
+
+	textarea {
+		height: 80%;
+		width: 80%;
+	}
+
+	.socialMedia {
+		height: 30vh;
+	}
+
+	.socialIcon {
+		height: 2.5rem;
+		width: 2.5rem;
+		margin: 1em 4em;
+	}
+}
+
 @media only screen and (min-width: 1326px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
 	nav {
 		height: 10vh;
@@ -2815,6 +4243,183 @@ textarea {
 
 	input {
 		height: 5rem;
+		width: 80%;
+		border-radius: 0.3rem;
+		margin-bottom: 1rem;
+	}
+
+	textarea {
+		height: 80%;
+		width: 80%;
+	}
+
+	.socialMedia {
+		height: 30vh;
+	}
+
+	.socialIcon {
+		height: 2.5rem;
+		width: 2.5rem;
+		margin: 1em 4em;
+	}
+}
+
+/* Ipad Pro Plus Lanscape */
+@media only screen and (min-width: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+	nav {
+		height: 10vh;
+		width: 100%;
+	}
+
+	.nav-items {
+		height: 50vh;
+		width: 100vw;
+	}
+
+	.links {
+		height: 10vh;
+		width: 61%;
+		position: absolute;
+		top: 0.05em;
+		left: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		transition: 500ms ease-in-out;
+		opacity: 1;
+		padding: 0;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0.8em;
+		right: 0.05rem;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-links li {
+		margin: 0 0.5em;
+		padding: 0;
+	}
+
+	.logo {
+		font-size: 5rem;
+		top: 0.4rem;
+		left: 1.3rem;
+	}
+
+	.links ul li a {
+		font-size: 3em;
+	}
+
+	.h {
+		height: 90vh;
+	}
+
+	.icons img {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 0 30px;
+		height: 60px;
+		width: 60px;
+	}
+
+	h1 {
+		font-size: 9rem;
+	}
+
+	h3 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 7rem;
+	}
+
+	h4 {
+		font-size: 4rem;
+	}
+
+	h5 {
+		font-size: 5rem;
+	}
+
+	h6 {
+		font-size: 4rem;
+	}
+
+	.skills {
+		height: 100vh;
+	}
+
+	.projectCards {
+		height: 350px;
+		width: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		border-radius: 1rem;
+		box-shadow: rgb(38, 57, 77) 0px 20px 10px -10px;
+		transition: 200ms ease-in-out;
+	}
+
+	p {
+		font-size: 2rem;
+		line-height: 1.8rem;
+		word-spacing: 0.8rem;
+		padding: 1rem 2rem;
+		text-align: center;
+	}
+
+	.email {
+		height: 180vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.profileImg {
+		height: 400px;
+		width: 400px;
+	}
+
+	.form-container {
+		height: 70vh;
+		width: 40vw;
+	}
+
+	.form {
+		height: 70vh;
+		width: 60vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+	}
+
+	.contact {
+		height: 50vh;
+		width: 30vw;
+	}
+
+	label {
+		font-family: "Inter", sans-serif;
+		font-optical-sizing: auto;
+		font-size: 1.8rem;
+		font-weight: 300;
+		text-align: left;
+	}
+
+	input {
+		height: 7rem;
 		width: 80%;
 		border-radius: 0.3rem;
 		margin-bottom: 1rem;
