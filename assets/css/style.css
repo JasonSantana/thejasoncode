@@ -2245,7 +2245,7 @@ textarea {
 	}
 
 	h2 {
-		font-size: 5.5rem;
+		font-size: 4rem;
 		font-family: "Tulpen One", sans-serif;
 		word-spacing: -1%;
 		text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
@@ -2297,7 +2297,7 @@ textarea {
 
 	.projectCards {
 		height: 350px;
-		width: 230px;
+		width: 200px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -4446,5 +4446,30 @@ textarea {
 @media only screen and (min-width: 1440px) and (-webkit-device-pixel-ratio: 2) {
 	.links {
 		width: 63%;
+	}
+}
+
+/* Large Desktops */
+
+@media only screen and (min-width: 1920px) and (-webkit-device-pixel-ratio: 2) {
+	.links {
+		width: 72%;
+	}
+
+	h2 {
+		font-size: 4.5rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+		max-width: 70vw;
+	}
+
+	.form-container {
+		width: 30%;
+	}
+
+	form {
+		width: 30%;
 	}
 }
