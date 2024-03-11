@@ -69,3 +69,60 @@ gsap.from(".socialIcon", {
 		start: "center 50%",
 	},
 });
+
+// scrollTo functions for links
+// Projects
+document
+	.getElementById("projectLink")
+	.addEventListener("click", function (event) {
+		event.preventDefault(); // Prevent default link behavior (e.g., navigating to a new page)
+
+		// Get the top position of the container
+		const projectTop = document
+			.getElementById("projects")
+			.getBoundingClientRect().top;
+
+		// Set the window height to match the container's top position
+		window.scrollTo({
+			top: projectTop,
+			behavior: "smooth", // Optional: Smooth scrolling effect
+		});
+	});
+
+// About
+
+document
+	.getElementById("aboutLink")
+	.addEventListener("click", function (event) {
+		event.preventDefault(); // Prevent default link behavior (e.g., navigating to a new page)
+
+		// Get the top position of the container
+		const aboutTop = document
+			.getElementById("about")
+			.getBoundingClientRect().top;
+
+		// Set the window height to match the container's top position
+		window.scrollTo({
+			top: aboutTop,
+			behavior: "smooth", // Optional: Smooth scrolling effect
+		});
+	});
+
+// Contact
+
+document
+	.getElementById("contactLink")
+	.addEventListener("click", function (event) {
+		event.preventDefault();
+
+		// Get the top position of the container
+		const contactTop = document
+			.getElementById("contact")
+			.getBoundingClientRect().top;
+
+		// Set the window height to match the container's top position
+		window.scrollTo({
+			top: contactTop,
+			behavior: "smooth", // Optional: Smooth scrolling effect
+		});
+	});
