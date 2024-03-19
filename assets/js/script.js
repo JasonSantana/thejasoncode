@@ -134,7 +134,7 @@ const redirectionMapping = {
 		facebook: "fb://jason.santana.9",
 		instagram: "instagram://user?username=stay_true777/",
 		x: "twitter:///user?screen_name=FilthyNoble",
-		github: "github://JasonSantana",
+		github: "github://user?screen_name=JasonSantana",
 		linkedin: "your-mobile-linkedin-url",
 	},
 	desktop: {
