@@ -126,3 +126,48 @@ document
 			behavior: "smooth", // Optional: Smooth scrolling effect
 		});
 	});
+
+// Link to mobile app vs Browser site
+
+const redirectionMapping = {
+	mobile: {
+		facebook: "fb://jason.santana.9",
+		instagram: "your-mobile-instagram-url",
+		x: "twitter://",
+		github: "your-mobile-github-url",
+		linkedin: "your-mobile-linkedin-url",
+	},
+	desktop: {
+		facebook: "https://www.facebook.com/jason.santana.9",
+		instagram: "https://www.instagram.com/stay_true777/",
+		x: "https://twitter.com/FilthyNoble",
+		github: "https://github.com/JasonSantana",
+		linkedin: "https://www.linkedin.com/in/jason-santana-94b685b6/",
+	},
+	// Add more mappings as needed
+};
+
+// Check if the user is on a mobile device
+const isMobile =
+	/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+		navigator.userAgent
+	);
+
+// Redirect the user based on their device type
+if (isMobile) {
+	redirectUser("mobile");
+} else {
+	redirectUser("desktop");
+}
+
+// Function to redirect the user based on the device type and platform
+function redirectUser(deviceType) {
+	const platform = "linkedin"; // Change the platform as needed
+
+	const url = redirectionMapping[deviceType][platform];
+	if (url) {
+		window.location.href = url;
+	} else {
+		console.error("No URL found for platform:", platform);
+	}
+}
