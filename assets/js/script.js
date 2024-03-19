@@ -183,10 +183,10 @@ document
 		redirectUser(deviceType, platform);
 	});
 
-// Function to redirect the user based on the device type and platform FB
+// Function to redirect the user based on the device type and platform X
 document.getElementById("xLink").addEventListener("click", function (event) {
 	event.preventDefault(); // Prevent default link behavior
-	const platform = ""; // Change the platform as needed
+	const platform = "x"; // Change the platform as needed
 	const isMobile =
 		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
 			navigator.userAgent
@@ -194,3 +194,43 @@ document.getElementById("xLink").addEventListener("click", function (event) {
 	const deviceType = isMobile ? "mobile" : "desktop";
 	redirectUser(deviceType, platform);
 });
+
+// Function to redirect the user based on the device type and platform ig
+document.getElementById("igLink").addEventListener("click", function (event) {
+	event.preventDefault(); // Prevent default link behavior
+	const platform = "instagram"; // Change the platform as needed
+	const isMobile =
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		);
+	const deviceType = isMobile ? "mobile" : "desktop";
+	redirectUser(deviceType, platform);
+});
+
+// Function to redirect the user based on the device type and platform linkedIn
+document
+	.getElementById("linkedInLink")
+	.addEventListener("click", function (event) {
+		event.preventDefault(); // Prevent default link behavior
+		const platform = "linkedin"; // Change the platform as needed
+		const isMobile =
+			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+				navigator.userAgent
+			);
+		const deviceType = isMobile ? "mobile" : "desktop";
+		redirectUser(deviceType, platform);
+	});
+
+// Function to redirect the user based on the device type and platform github
+document
+	.getElementById("githubLink")
+	.addEventListener("click", function (event) {
+		event.preventDefault(); // Prevent default link behavior
+		const platform = "github"; // Change the platform as needed
+		const isMobile =
+			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+				navigator.userAgent
+			);
+		const deviceType = isMobile ? "mobile" : "desktop";
+		redirectUser(deviceType, platform);
+	});
