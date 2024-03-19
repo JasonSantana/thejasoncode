@@ -132,9 +132,9 @@ document
 const redirectionMapping = {
 	mobile: {
 		facebook: "fb://jason.santana.9",
-		instagram: "your-mobile-instagram-url",
-		x: "twitter://",
-		github: "your-mobile-github-url",
+		instagram: "instagram://user?username=stay_true777/",
+		x: "twitter:///user?screen_name=FilthyNoble",
+		github: "github://JasonSantana",
 		linkedin: "your-mobile-linkedin-url",
 	},
 	desktop: {
@@ -169,7 +169,7 @@ if (isMobile) {
 	redirectUser("desktop");
 }
 
-// Function to redirect the user based on the device type and platform
+// Function to redirect the user based on the device type and platform FB
 document
 	.getElementById("facebookLink")
 	.addEventListener("click", function (event) {
@@ -182,3 +182,15 @@ document
 		const deviceType = isMobile ? "mobile" : "desktop";
 		redirectUser(deviceType, platform);
 	});
+
+// Function to redirect the user based on the device type and platform FB
+document.getElementById("xLink").addEventListener("click", function (event) {
+	event.preventDefault(); // Prevent default link behavior
+	const platform = ""; // Change the platform as needed
+	const isMobile =
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		);
+	const deviceType = isMobile ? "mobile" : "desktop";
+	redirectUser(deviceType, platform);
+});
