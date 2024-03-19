@@ -132,10 +132,8 @@ document
 const redirectionMapping = {
 	mobile: {
 		facebook: "fb://jason.santana.9",
-		instagram: "instagram://user?username=stay_true777/",
+		instagram: "instagram://user?username=stay_true777",
 		x: "twitter:///user?screen_name=FilthyNoble",
-		github: "github://user?screen_name=JasonSantana",
-		linkedin: "your-mobile-linkedin-url",
 	},
 	desktop: {
 		facebook: "https://www.facebook.com/jason.santana.9",
@@ -173,7 +171,7 @@ if (isMobile) {
 document
 	.getElementById("facebookLink")
 	.addEventListener("click", function (event) {
-		event.preventDefault(); // Prevent default link behavior
+		// event.preventDefault(); // Prevent default link behavior
 		const platform = "facebook"; // Change the platform as needed
 		const isMobile =
 			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -206,31 +204,3 @@ document.getElementById("igLink").addEventListener("click", function (event) {
 	const deviceType = isMobile ? "mobile" : "desktop";
 	redirectUser(deviceType, platform);
 });
-
-// Function to redirect the user based on the device type and platform linkedIn
-document
-	.getElementById("linkedInLink")
-	.addEventListener("click", function (event) {
-		event.preventDefault(); // Prevent default link behavior
-		const platform = "linkedin"; // Change the platform as needed
-		const isMobile =
-			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-				navigator.userAgent
-			);
-		const deviceType = isMobile ? "mobile" : "desktop";
-		redirectUser(deviceType, platform);
-	});
-
-// Function to redirect the user based on the device type and platform github
-document
-	.getElementById("githubLink")
-	.addEventListener("click", function (event) {
-		event.preventDefault(); // Prevent default link behavior
-		const platform = "github"; // Change the platform as needed
-		const isMobile =
-			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-				navigator.userAgent
-			);
-		const deviceType = isMobile ? "mobile" : "desktop";
-		redirectUser(deviceType, platform);
-	});

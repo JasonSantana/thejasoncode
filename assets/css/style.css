@@ -412,6 +412,7 @@ textarea {
 	height: 1rem;
 	width: 1rem;
 	margin: 1em 1em;
+	cursor: pointer;
 }
 
 /* Media Queries */
@@ -3926,6 +3927,7 @@ textarea {
 
 	.socialMedia li:hover {
 		transform: scale(1.2);
+		cursor: pointer;
 	}
 
 	.socialIcon {
