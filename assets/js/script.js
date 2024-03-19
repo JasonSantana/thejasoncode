@@ -147,6 +147,15 @@ const redirectionMapping = {
 	// Add more mappings as needed
 };
 
+function redirectUser(deviceType, platform) {
+	const url = redirectionMapping[deviceType][platform];
+	if (url) {
+		window.location.href = url;
+	} else {
+		console.error("No URL found for platform:", platform);
+	}
+}
+
 // Check if the user is on a mobile device
 const isMobile =
 	/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -161,13 +170,15 @@ if (isMobile) {
 }
 
 // Function to redirect the user based on the device type and platform
-function redirectUser(deviceType) {
-	const platform = "linkedin"; // Change the platform as needed
-
-	const url = redirectionMapping[deviceType][platform];
-	if (url) {
-		window.location.href = url;
-	} else {
-		console.error("No URL found for platform:", platform);
-	}
-}
+document
+	.getElementById("facebookLink")
+	.addEventListener("click", function (event) {
+		event.preventDefault(); // Prevent default link behavior
+		const platform = "facebook"; // Change the platform as needed
+		const isMobile =
+			/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+				navigator.userAgent
+			);
+		const deviceType = isMobile ? "mobile" : "desktop";
+		redirectUser(deviceType, platform);
+	});
